@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731017176541",
+    "project_id": "instruxa",
+    "storage_bucket": "instruxa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731017176541:android:ed7c6ea361ea959886c234",
+        "android_client_info": {
+          "package_name": "com.clementvexegon.instruxa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFPOwWJYWpfeG_rki2Anfom5t9JB38Heo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
