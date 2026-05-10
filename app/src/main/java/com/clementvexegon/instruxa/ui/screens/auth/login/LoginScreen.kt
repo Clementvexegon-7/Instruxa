@@ -24,8 +24,8 @@ import androidx.navigation.compose.rememberNavController
 import com.clementvexegon.instruxa.navigation.ROUT_HOME
 import com.clementvexegon.instruxa.navigation.ROUT_REGISTER
 import com.clementvexegon.instruxa.ui.theme.InstruxaTheme
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.Firebase
 import kotlin.math.*
 
 @Composable
@@ -204,7 +204,7 @@ fun LoginScreen(navController: NavController) {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
                     TextButton(onClick = {
                         if (email.isNotBlank() && email.contains("@")) {
-                            Firebase.auth.sendPasswordResetEmail(email)
+                            FirebaseAuth.getInstance().sendPasswordResetEmail(email)
                         } else {
                             emailError = "Enter your email first"
                         }
@@ -227,7 +227,7 @@ fun LoginScreen(navController: NavController) {
                             isLoading = true
                             firebaseError = ""
                             // ── FIREBASE AUTH ─────────────────────
-                            Firebase.auth.signInWithEmailAndPassword(email.trim(), password)
+                            FirebaseAuth.getInstance().signInWithEmailAndPassword(email.trim(), password)
                                 .addOnSuccessListener {
                                     isLoading = false
                                     navController.navigate(ROUT_HOME) {

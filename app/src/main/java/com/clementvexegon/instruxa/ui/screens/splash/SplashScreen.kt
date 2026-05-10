@@ -1,6 +1,5 @@
 package com.clementvexegon.instruxa.ui.screens.splash
 
-import android.graphics.Color
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
@@ -49,7 +48,6 @@ import androidx.navigation.compose.rememberNavController
 import com.clementvexegon.instruxa.navigation.ROUT_ONBOARDING
 import com.clementvexegon.instruxa.ui.theme.InstruxaTheme
 import kotlinx.coroutines.delay
-import java.nio.file.Files.size
 import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.cos
@@ -77,9 +75,9 @@ import kotlin.math.sqrt
 fun SplashScreen(navController: NavController) {
 
     // ── One-time entry animations ─────────
-    val logoScale    = remember { android.graphics.drawable.Animatable(0f) }
-    val nameAlpha    = remember { android.graphics.drawable.Animatable(0f) }
-    val taglineAlpha = remember { android.graphics.drawable.Animatable(0f) }
+    val logoScale    = remember { Animatable(0f) }
+    val nameAlpha    = remember { Animatable(0f) }
+    val taglineAlpha = remember { Animatable(0f) }
 
     // ── Continuous looping animations ─────
     val infiniteTransition = rememberInfiniteTransition(label = "splash_bg")

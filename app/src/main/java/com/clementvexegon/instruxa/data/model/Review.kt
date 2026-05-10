@@ -9,8 +9,5 @@ data class Review(
     val comment: String = "",
     val tags: List<String> = emptyList(),
     val recommends: Boolean = true,
-    val timestamp: Long = 0L,
-
-    const val ROUT_NOTIFICATIONS    = "notifications",
-            const val ROUT_USER_PROFILE     = "user_profile"
+    val timestamp: Long = 0L
 )
