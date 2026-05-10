@@ -21,4 +21,3 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.clementvexegon.instruxa", appContext.packageName)
     }
-}
