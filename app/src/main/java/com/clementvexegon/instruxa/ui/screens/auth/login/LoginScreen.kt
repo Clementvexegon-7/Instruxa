@@ -25,7 +25,6 @@ import com.clementvexegon.instruxa.navigation.ROUT_HOME
 import com.clementvexegon.instruxa.navigation.ROUT_REGISTER
 import com.clementvexegon.instruxa.ui.theme.InstruxaTheme
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.Firebase
 import kotlin.math.*
 
 @Composable
@@ -204,7 +203,7 @@ fun LoginScreen(navController: NavController) {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
                     TextButton(onClick = {
                         if (email.isNotBlank() && email.contains("@")) {
-                            FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+                            FirebaseAuth.getInstance().sendPasswordResetEmail(email.trim())
                         } else {
                             emailError = "Enter your email first"
                         }

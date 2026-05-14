@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.inappmessaging.display)
     implementation(libs.firebase.storage)
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
